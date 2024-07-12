@@ -1,3 +1,11 @@
+<div align="center">
+<h1> PokemonWiki - Wikipedia All Pokemon in one place </h1>
+<a href="#">
+    <img src="./cover.jpg" alt="readme-project-template">
+</a>
+</div>
+
+
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 # Getting Started
