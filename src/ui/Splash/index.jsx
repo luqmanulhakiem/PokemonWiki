@@ -11,7 +11,7 @@ const SplashScreen = ({ navigation }) => {
 
   return (
     <View>
-      <Text>SplashScreen</Text>
+      <Text>SplashScreen AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaaa</Text>
     </View>
   )
 }

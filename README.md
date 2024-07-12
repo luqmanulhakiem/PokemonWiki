@@ -59,7 +59,6 @@ This is one way to run your app — you can also run it directly from within And
 List of library packages used in this App:
 
 - [React Navigation](https://reactnavigation.org/docs/getting-started/)
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+- [React Native Svg](https://www.npmjs.com/package/react-native-svg/v/12.3.0)
+- [Font Awesome Icon](https://docs.fontawesome.com/web/use-with/react-native)
+- [React Native Asset](https://www.npmjs.com/package/react-native-asset)
