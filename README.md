@@ -62,3 +62,4 @@ List of library packages used in this App:
 - [React Native Svg](https://www.npmjs.com/package/react-native-svg/v/12.3.0)
 - [Font Awesome Icon](https://docs.fontawesome.com/web/use-with/react-native)
 - [React Native Asset](https://www.npmjs.com/package/react-native-asset)
+- [React Native Svg Transformer](https://github.com/kristerkari/react-native-svg-transformer)
