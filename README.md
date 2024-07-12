@@ -58,7 +58,7 @@ This is one way to run your app — you can also run it directly from within And
 
 List of library packages used in this App:
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
+- [React Navigation](https://reactnavigation.org/docs/getting-started/)
 - [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
 - [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
 - [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
