@@ -5,12 +5,11 @@
 </a>
 </div>
 
-
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
-
 # Introduction
 
 >PokemonWiki is Wikipedia of all Pokemon you need to know in one place.
+
+[Link Design](https://www.figma.com/design/HBAANmNzse2qpx8Tze3uxH/PokemonWiki-App?node-id=0-1&t=oOOZ8jhgU9cSFTFy-1)
 
 
 ## Step 1: Start the Metro Server
