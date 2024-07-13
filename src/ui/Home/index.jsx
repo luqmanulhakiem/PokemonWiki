@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { Avatar } from '../../assets/svg'
 
-const HomeScreen = () => {
+const HomeScreen = ({navigation}) => {
   return (
     <View style={styles.main}>
       <ScrollView showsVerticalScrollIndicator={false}>
@@ -14,7 +14,7 @@ const HomeScreen = () => {
           <Text style={[styles.fontfamily, styles.textHeader]}>Trainer</Text>
 
           </View>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate("ProfileScreen")}>
             <Avatar />
           </TouchableOpacity>
         </View>
