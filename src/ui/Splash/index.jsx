@@ -4,15 +4,15 @@ import { PokeballLogo } from '../../assets/svg'
 
 const SplashScreen = ({ navigation }) => {
 
-    // useEffect(() => {
-    //     setTimeout(() => {
-    //         navigation.replace('HomeScreen');
-    //     }, 500)
-    // }, [navigation])
+    useEffect(() => {
+        setTimeout(() => {
+            navigation.replace('HomeScreen');
+        }, 500)
+    }, [navigation])
 
   return (
     <View style={styles.main}>
-      {/* <PokeballLogo /> */}
+      <PokeballLogo />
       <Text style={[styles.fontfamily, styles.title]}>PokemonWiki</Text>
     </View>
   )
