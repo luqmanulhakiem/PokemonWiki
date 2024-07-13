@@ -28,7 +28,7 @@ const HomeScreen = ({navigation}) => {
           </View>
         </View>
         <View style={styles.grid}>
-          <TouchableOpacity style={styles.cardItem}>
+          <TouchableOpacity style={styles.cardItem} onPress={() => navigation.navigate("DetailScreen")}>
             <Image style={styles.cardImage} source={{uri: 'https://img.pokemondb.net/artwork/mewtwo.jpg'}} />
             <Text style={styles.cardText}>Nama Pokemon</Text>
           </TouchableOpacity>
