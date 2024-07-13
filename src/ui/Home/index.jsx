@@ -24,7 +24,7 @@ const HomeScreen = () => {
             placeholder='Search Pokemon...'
           />
           <View style={styles.btnSearch} onPresss="">
-            <FontAwesomeIcon icon={faSearch} />
+            <FontAwesomeIcon style={{color: 'white'}} icon={faSearch} />
           </View>
         </View>
         <View style={styles.grid}>
