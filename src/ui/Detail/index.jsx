@@ -1,16 +1,52 @@
 import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { faRuler, faScaleBalanced } from '@fortawesome/free-solid-svg-icons'
+import axios from 'react-native-axios'
+import { BASE_URL } from '../../data/utils/apiService'
 
-const DetailScreen = () => {
+const DetailScreen = ({route}) => {
+  const { inputValue } = route.params;
+
+  const [data, setData] = useState({});
+  const [type, setType] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    getData();
+  }, [])
+
+  async function getData(){
+    setLoading(true)
+      try {   
+        const res = await axios.get(`${BASE_URL}/${inputValue}`);
+        console.log(res.data.types)
+        console.log(res.data.types[0].type.name)
+        if (res) {
+            setData(res.data)
+            setType(res.data.types)
+            setLoading(true)
+        }
+      } catch (error) {
+        console.log(error)
+      }
+  }
+
   return (
     <ScrollView style={styles.main} showsVerticalScrollIndicator={false}>
-      <Image style={styles.detailImage} source={{uri: 'https://img.pokemondb.net/artwork/mew.jpg'}} />
-      <Text style={[styles.fontfamily, styles.pokemonName]}>Mew</Text>
+      <Image style={styles.detailImage} source={{uri: `https://img.pokemondb.net/artwork/${inputValue}.jpg`}} />
+      <Text style={[styles.fontfamily, styles.pokemonName]}>{inputValue}</Text>
       <View style={styles.flexRow}>
-        <Text style={[styles.fontfamily, styles.textTipe]}>Tipe A</Text>
-        <Text style={[styles.fontfamily, styles.textTipe]}>Tipe B</Text>
+        {type.length > 0 
+          ?
+          type.map((item, key) => {
+            return (
+              <Text key={key} style={[styles.fontfamily, styles.textTipe]}>{item.type.name}</Text>
+            )
+          })
+          :
+          <Text></Text>
+        }
       </View>
       <View style={styles.divider}></View>
       <View style={[styles.flexRow, styles.infoStats]}>
@@ -20,7 +56,7 @@ const DetailScreen = () => {
             <Text style={[styles.fontfamily, styles.textCaption2]}>Weight</Text>
           </View>
           <View style={styles.cardStats}>
-            <Text style={[styles.fontfamily, styles.textStats]}>10 Kg</Text>
+            <Text style={[styles.fontfamily, styles.textStats]}>{data.weight} Kg</Text>
           </View>
         </View>
         <View>
@@ -29,7 +65,7 @@ const DetailScreen = () => {
             <Text style={[styles.fontfamily, styles.textCaption2]}>Height</Text>
           </View>
           <View style={styles.cardStats}>
-            <Text style={[styles.fontfamily, styles.textStats]}>10 cm</Text>
+            <Text style={[styles.fontfamily, styles.textStats]}>{data.height} cm</Text>
           </View>
         </View>
       </View>

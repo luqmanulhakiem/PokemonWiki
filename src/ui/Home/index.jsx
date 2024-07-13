@@ -58,7 +58,7 @@ const HomeScreen = ({navigation}) => {
           {data.length > 0 ?
           data.map((item, key) => {
               return (
-                <TouchableOpacity key={key} style={Homestyles.cardItem} onPress={() => navigation.navigate("DetailScreen", {inputValue})}>
+                <TouchableOpacity key={key} style={Homestyles.cardItem} onPress={() => navigation.navigate("DetailScreen", {inputValue: item.name})}>
                   <Image style={Homestyles.cardImage} source={{uri: `https://img.pokemondb.net/artwork/${item.name}.jpg`}} />
                   <Text style={Homestyles.cardText}>{item.name}</Text>
                 </TouchableOpacity>
