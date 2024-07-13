@@ -2,7 +2,7 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import { Avatar, PokeballIcon } from '../../assets/svg'
 
-const ProfileScreen = () => {
+const ProfileScreen = ({navigation}) => {
   return (
     <View style={styles.main}>
       <View style={styles.section1}>
@@ -12,7 +12,7 @@ const ProfileScreen = () => {
         </View>
         <Avatar />
       </View>
-      <TouchableOpacity style={[styles.card, styles.shadowProp]}>
+      <TouchableOpacity style={[styles.card, styles.shadowProp]} onPress={() => navigation.navigate("FavoriteScreen")}>
         <Text style={[styles.fontfamily, styles.textTitle2]}>Total Pokemon</Text>
         <View style={styles.totalPokemon}>
           <Text style={[styles.fontfamily, styles.textTitle2]}>10</Text>
