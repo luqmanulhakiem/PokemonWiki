@@ -139,5 +139,6 @@ const styles = StyleSheet.create({
     fontFamily: 'Poppins-SemiBold',
     textAlign: 'center',
     marginTop: 10,
+    color: 'white'
   }
 })
